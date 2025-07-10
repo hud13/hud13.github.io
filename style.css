@@ -1,33 +1,100 @@
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Header and Navigation */
 header {
-background-color: #333;
-color: #fff;
-padding: 1rem;
-text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 nav ul {
-list-style: none;
-padding: 0;
+  list-style: none;
+  padding: 0;
+  text-align: center;
 }
 
 nav ul li {
-display: inline;
-margin: 0 1rem;
+  display: inline;
+  margin: 0 1rem;
 }
 
 nav ul li a {
-color: #fff;
-text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
+/* Section Styling */
 section {
-padding: 2rem;
-text-align: center;
+  height: 100vh;
+  padding-top: 80px; /* offsets fixed nav */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* Unique Backgrounds for Each Section */
+#home {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+#portfolio {
+  background: linear-gradient(to right, #c94b4b, #4b134f);
+}
+
+#allProjects {
+  background: linear-gradient(to right, #373B44, #4286f4);
+}
+
+#about {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+#contact {
+  background: linear-gradient(to right, #1d976c, #93f9b9);
+  color: black;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  width: 100%;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
 }
