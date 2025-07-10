@@ -5,10 +5,11 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  height: 100%;
 }
 
 /* Header and Navigation */
@@ -50,44 +51,15 @@ section {
   color: white;
 }
 
-/* Unique Backgrounds for Each Section */
+/* Unique Backgrounds for Each Full-Page Section */
 #home {
   background: linear-gradient(to right, #1e3c72, #2a5298);
 }
 
-#portfolio {
+#projects {
   background: linear-gradient(to right, #c94b4b, #4b134f);
 }
 
-.project {
-  padding: 2rem;
-  margin: 1rem auto;
-  width: 90%;
-  border-radius: 10px;
-  color: white;
-}
-
-/* Unique Backgrounds */
-.memory-allocator {
-  background: linear-gradient(135deg, #2c3e50, #4ca1af);
-}
-
-.four-bit-computer {
-  background: linear-gradient(135deg, #8e44ad, #3498db);
-}
-
-.snake-game {
-  background: linear-gradient(135deg, #e67e22, #f1c40f);
-}
-
-.amplifier-design {
-  background: linear-gradient(135deg, #1f4037, #99f2c8);
-  color: black;
-}
-
-.additional {
-  background: linear-gradient(135deg, #232526, #414345);
-}
 #about {
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
@@ -97,7 +69,7 @@ section {
   color: black;
 }
 
-/* Contact Form */
+/* Contact Form Styling */
 form {
   display: flex;
   flex-direction: column;
@@ -110,6 +82,7 @@ input, textarea {
   padding: 10px;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
 button {
@@ -123,4 +96,38 @@ button {
 
 button:hover {
   background: #444;
+}
+
+/* Project Block Styling Inside #projects */
+.project {
+  padding: 2rem;
+  margin: 1rem auto;
+  width: 90%;
+  border-radius: 10px;
+  color: white;
+  text-align: left;
+  max-width: 800px;
+}
+
+/* Unique Gradient Backgrounds for Each Project */
+.memory-allocator {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+
+.four-bit-computer {
+  background: linear-gradient(135deg, #8e44ad, #3498db);
+}
+
+.snake-game {
+  background: linear-gradient(135deg, #e67e22, #f1c40f);
+  color: black;
+}
+
+.amplifier-design {
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  color: black;
+}
+
+.more-projects {
+  background: linear-gradient(135deg, #232526, #414345);
 }
