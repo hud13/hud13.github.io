@@ -59,6 +59,14 @@ section {
   background: linear-gradient(to right, #c94b4b, #4b134f);
 }
 
+.project {
+  padding: 2rem;
+  margin: 1rem auto;
+  width: 90%;
+  border-radius: 10px;
+  color: white;
+}
+
 /* Unique Backgrounds */
 .memory-allocator {
   background: linear-gradient(135deg, #2c3e50, #4ca1af);
@@ -77,7 +85,7 @@ section {
   color: black;
 }
 
-.more-projects {
+.additional {
   background: linear-gradient(135deg, #232526, #414345);
 }
 #about {
