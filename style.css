@@ -98,15 +98,15 @@ button:hover {
   background: #444;
 }
 
-/* Project Block Styling Inside #projects */
 .project {
-  padding: 2rem;
-  margin: 1rem auto;
-  width: 90%;
-  border-radius: 10px;
+  height: 100vh;
+  padding-top: 80px; /* for fixed nav */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: white;
-  text-align: left;
-  max-width: 800px;
 }
 
 /* Unique Gradient Backgrounds for Each Project */
