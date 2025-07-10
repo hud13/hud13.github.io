@@ -1,92 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
 <header>
-<nav>
-<h2></h2>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+  <nav>
+    <h2></h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>
+
 <section id="home">
-<h1>Welcome to My Portfolio</h1>
-<p>This is a page to showcase my skills and highlight projects I have completed throughout my undergraduate career at the University of Utah.
-</p>
+  <h1>Welcome to My Portfolio</h1>
+  <p>This is a page to showcase my skills and highlight projects I have completed throughout my undergraduate career at the University of Utah.</p>
 </section>
-<section id="portfolio">
-<h2>My Projects</h2>
 
-<div class="memory-allocator">
-<h2>Memory Allocator</h2>
-<p>A dynamic storage allocator project focused on space utilization and throughput.
-It includes functions that allocate and free a requested block size while maintaining 16-byte alignment.
-An explicit free list is used to quickly find suitable memory blocks as well as unmapping unused page chunks for better efficiency.
-A heap consistency checker function is included used to ensure no storage corruption or errors occur. 
-The full implementation can be found here: GITHUB LINK IDIOT
-</p>
-</div>
+<section id="projects">
+  <h2>My Projects</h2>
 
-<div class="project four-bit-computer">
-<h2>4-Bit Computer</h2>
-<p>A simple computer implementation project based around the principle of Von Neumann Architecture.
-Given a desired datapath definition, this project transformed a conceptual finite state machine into a functional control unit integrated onto a Field-Programmable-Gate-Array (FPGA) board. 
-Logic gates and sequential circuits were implemented using Verilog, and verified through a testbench program and waveform analysis. 
-The design was downloaded and verified on an FPGA board, correctly responding to the board's physical switches and internal clock. 
-Full control unit Verilog and testbench code can be found here: GITHUB LINK DOOFUS
-</p>
-</div>
+  <div class="project memory-allocator">
+    <h2>Memory Allocator</h2>
+    <p>A dynamic storage allocator project focused on space utilization and throughput.
+    It includes functions that allocate and free a requested block size while maintaining 16-byte alignment.
+    An explicit free list is used to quickly find suitable memory blocks as well as unmapping unused page chunks for better efficiency.
+    A heap consistency checker function is included to ensure no storage corruption or errors occur. 
+    The full implementation can be found here: <a href="#">GITHUB LINK</a></p>
+  </div>
 
-<div class="project snake-game">
-<h2>Snake Game</h2>
-<p>A recreation of the classic snake game I collaborated on with a team. 
-This web-based game can be played over a local network with bots or human players, 
-and featured a constantly updating game data page handled by frequent SQL queries and responses. 
-CSS was used to visualy represent JSON-formatted data through a client connection to the server. 
-Partial game and network code can be viewed here: GITHUB LINK LATER
-</p>
-</div>
+  <div class="project four-bit-computer">
+    <h2>4-Bit Computer</h2>
+    <p>A simple computer implementation project based on Von Neumann Architecture.
+    A finite state machine was transformed into a control unit for an FPGA board using Verilog.
+    Verified through testbenches and waveform analysis.
+    <a href="#">GITHUB LINK</a></p>
+  </div>
 
-<div class="project amplifier-design">
-<h2>Amplifier Design</h2>
-<p>A collection of projects revolving around constructing amplifier circuits to be used in a microphone.
-PSPICE was used to construct a circuit schematic with appropriate component values for both BJT and MOSFET style amplifiers for a 15V power supply. 
-Circuit behavior was simulated to ensure correct response throughout an appropriate range of frequencies. 
-The circuit was then constructed and verified through a testing process involving oscilloscope measurements of expected frequency and current. 
+  <div class="project snake-game">
+    <h2>Snake Game</h2>
+    <p>A team-built web-based version of the snake game playable over a local network.
+    Game state was managed with SQL and rendered using CSS from JSON server responses.
+    <a href="#">GITHUB LINK</a></p>
+  </div>
 
-(more details here button that shows more pictures of the process here)
-(Separate bjt and mosfet amplifier designs are shown in a drop down style page)
-</p>
-</div>
+  <div class="project amplifier-design">
+    <h2>Amplifier Design</h2>
+    <p>Amplifier circuits (BJT and MOSFET) were designed and simulated in PSPICE, then constructed and tested with oscilloscope analysis for use in a microphone system.
+    (More details and schematic images available)</p>
+  </div>
 
-<div class="project additional">
-<h2>Additional Projects</h2>
-<g>More notable projects I have worked on can be viewed on GitHub <link href="https://github.com/hud13/projects" title="HERE"></g>
-</div>
-
+  <div class="project more-projects">
+    <h2>Additional Projects</h2>
+    <p>More notable projects I have worked on can be viewed on GitHub:
+    <a href="https://github.com/hud13/projects" target="_blank">HERE</a></p>
+  </div>
 </section>
+
 <section id="about">
-<h2>About Me</h2>
-<p>Information about me self.</p>
+  <h2>About Me</h2>
+  <p>Information about myself.</p>
 </section>
+
 <section id="contact">
-<h2>Contact Me</h2>
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Your Message"></textarea>
-<button type="submit">Send</button>
-</form>
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" />
+    <input type="email" placeholder="Your Email" />
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
 </section>
+
 <script src="script.js"></script>
 </body>
 </html>
