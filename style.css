@@ -39,16 +39,15 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* Section Styling */
 section {
   height: 100vh;
-  padding-top: 80px; /* offsets fixed nav */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* centers content vertically */
+  align-items: center;     /* centers content horizontally */
+  padding-top: 80px;       /* offset for fixed header */
   text-align: center;
-  color: white;
+  scroll-snap-align: start;
 }
 
 /* Unique Backgrounds for Each Full-Page Section */
