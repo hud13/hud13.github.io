@@ -39,15 +39,17 @@ nav ul li a {
   text-decoration: none;
 }
 
-section {
+section,
+.project {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centers content vertically */
-  align-items: center;     /* centers content horizontally */
-  padding-top: 80px;       /* offset for fixed header */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   scroll-snap-align: start;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 /* Unique Backgrounds for Each Full-Page Section */
@@ -97,16 +99,6 @@ button:hover {
   background: #444;
 }
 
-.project {
-  height: 100vh;
-  padding-top: 80px; /* offset for fixed nav */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  scroll-snap-align: start;
-}
 
 /* Unique Gradient Backgrounds for Each Project */
 .memory-allocator {
