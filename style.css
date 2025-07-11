@@ -67,7 +67,6 @@ section,
 
 #contact {
   background: linear-gradient(to right, #1d976c, #93f9b9);
-  color: black;
 }
 
 /* Contact Form Styling */
@@ -111,12 +110,10 @@ button:hover {
 
 .snake-game {
   background: linear-gradient(135deg, #e67e22, #f1c40f);
-  color: black;
 }
 
 .amplifier-design {
   background: linear-gradient(135deg, #1f4037, #99f2c8);
-  color: black;
 }
 
 .more-projects {
