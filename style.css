@@ -108,10 +108,6 @@ button:hover {
   background: linear-gradient(135deg, #8e44ad, #3498db);
 }
 
-.snake-game {
-  background: linear-gradient(135deg, #e67e22, #f1c40f);
-}
-
 .amplifier-design {
   background: linear-gradient(135deg, #1f4037, #99f2c8);
 }
