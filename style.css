@@ -20,24 +20,24 @@ body::-webkit-scrollbar {
 
 /* Scrollbar track (background) */
 body::-webkit-scrollbar-track {
-  background: #424950;
+  background: #222629;
 }
 
 /* Scrollbar thumb (the draggable part) */
 body::-webkit-scrollbar-thumb {
-  background-color: #b7148c;    /* medium gray */
+  background-color: #474B4F;    /* medium gray */
   border-radius: 10px;
-  border: 3px solid #2c3e50; /* creates padding around the thumb */
+  border: 3px solid #61892F; /* creates padding around the thumb */
 }
 
 /* Optional hover effect */
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #aaa;
+  background-color: #6B6E70;
 }
 
 /* Header and Navigation */
 header {
-  background-color: #333;
+  background-color: #474B4F;
   color: #fff;
   padding: 1rem;
   position: fixed;
@@ -76,8 +76,8 @@ section,
 }
 
 #home {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                    url('images/PolygonBack.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                    url('images/HexBackground.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,18 +86,18 @@ section,
 }
 
 #home .round-image {
-  width: 40vh;
-  height: 40vh;
+  width: 25vh;
+  height: 25vh;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
   transition: transform 0.3s ease;
 }
 
 #home .text-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #474B4F;
   color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -107,11 +107,11 @@ section,
 }
 
 #projects {
-  background: linear-gradient(to top, #424950, #6e7275);
+  background-color: #222629;
 }
 
 #projects .text-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #474B4F;
   color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -121,11 +121,11 @@ section,
 }
 
 #about {
-  background: linear-gradient(to top, #cf3cac, #5b8baf);
+  background-color: #222629;
 }
 
 #about .text-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #474B4F;
   color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -135,11 +135,11 @@ section,
 }
 
 #contact {
-  background: linear-gradient(to right, #1d976c, #93f9b9);
+  background-color: #222629;
 }
 
 #contact .text-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #474B4F;
   color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -166,7 +166,7 @@ input, textarea {
 
 button {
   padding: 10px;
-  background: black;
+  background-color: #61892F;
   color: white;
   border: none;
   border-radius: 5px;
@@ -179,11 +179,11 @@ button:hover {
 
 /* Unique Gradient Backgrounds for Each Project */
 .memory-allocator {
-  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  background-color: #222629;
 }
 
 .memory-allocator .text-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #474B4F;
   color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -193,11 +193,11 @@ button:hover {
 }
 
 .four-bit-computer {
-  background: linear-gradient(135deg, #8e44ad, #3498db);
+  background-color: #222629;
 }
 
 .four-bit-computer .text-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #474B4F;
   color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -207,11 +207,11 @@ button:hover {
 }
 
 .amplifier-design {
-  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  background-color: #222629;
 }
 
 .amplifier-design .text-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #474B4F;
   color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -221,11 +221,11 @@ button:hover {
 }
 
 .more-projects {
-  background: linear-gradient(to top, #424950, #6e7275);
+ background-color: #222629;
 }
 
 .more-projects .text-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #474B4F;
   color: white;
   padding: 2rem;
   border-radius: 10px;
