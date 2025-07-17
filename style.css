@@ -10,6 +10,29 @@ html, body {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   height: 100%;
+  overflow-x: hidden; /* Prevent right-side white strip */
+}
+
+/* Scrollbar container */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Scrollbar track (background) */
+body::-webkit-scrollbar-track {
+  background: #424950;
+}
+
+/* Scrollbar thumb (the draggable part) */
+body::-webkit-scrollbar-thumb {
+  background-color: #b7148c;    /* medium gray */
+  border-radius: 10px;
+  border: 3px solid #2c3e50; /* creates padding around the thumb */
+}
+
+/* Optional hover effect */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
 }
 
 /* Header and Navigation */
@@ -52,21 +75,77 @@ section,
   box-sizing: border-box;
 }
 
-/* Unique Backgrounds for Each Full-Page Section */
 #home {
-  background: linear-gradient(to right, #1e3c72, #2a5298);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                    url('images/PolygonBack.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+}
+
+#home .round-image {
+  width: 40vh;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+  transition: transform 0.3s ease;
+}
+
+#home .text-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 #projects {
-  background: linear-gradient(to right, #c94b4b, #4b134f);
+  background: linear-gradient(to top, #424950, #6e7275);
+}
+
+#projects .text-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 #about {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to top, #cf3cac, #5b8baf);
+}
+
+#about .text-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 #contact {
   background: linear-gradient(to right, #1d976c, #93f9b9);
+}
+
+#contact .text-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact Form Styling */
@@ -98,20 +177,59 @@ button:hover {
   background: #444;
 }
 
-
 /* Unique Gradient Backgrounds for Each Project */
 .memory-allocator {
   background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+
+.memory-allocator .text-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .four-bit-computer {
   background: linear-gradient(135deg, #8e44ad, #3498db);
 }
 
+.four-bit-computer .text-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 .amplifier-design {
   background: linear-gradient(135deg, #1f4037, #99f2c8);
 }
 
+.amplifier-design .text-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 .more-projects {
-  background: linear-gradient(135deg, #232526, #414345);
+  background: linear-gradient(to top, #424950, #6e7275);
+}
+
+.more-projects .text-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
