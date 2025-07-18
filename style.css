@@ -44,6 +44,15 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-left: 1rem;
 }
 
 nav ul {
@@ -76,11 +85,12 @@ section,
 }
 
 #home {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.82)),
                     url('images/HexBackground.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
   color: white;
 }
@@ -135,7 +145,14 @@ section,
 }
 
 #contact {
-  background-color: #222629;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.1)),
+                    url('images/HexBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  color: white;
 }
 
 #contact .text-box {
