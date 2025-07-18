@@ -120,7 +120,7 @@ section,
   background-color: #222629;
 }
 
-#projects .text-box {
+.text-box {
   background-color: #474B4F;
   color: white;
   padding: 2rem;
@@ -128,6 +128,163 @@ section,
   max-width: 600px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Memory Allocator Images */
+
+.Gmacs{
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.Diagram{
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.Editor{
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+/* Simple Computer Images */
+
+.Circuit{
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.Verilog{
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.Testbench{
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.Editor{
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+/* Button styling */
+.button-row {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Dropdown buttons */
+.dropdown-toggle {
+  padding: 0.6rem 1.2rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: #666;
+}
+
+/* Dropdown wrapper allows side-by-side layout */
+.dropdown-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Each dropdown panel */
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: dropdownFade 0.4s ease-out;
+  position: relative;
+}
+
+/* Animation effect */
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Image styling */
+.dropdown-content img {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.dropdown-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Optional: group images into rows */
+.dropdown-content {
+  text-align: center;
 }
 
 #about {
@@ -143,6 +300,34 @@ section,
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
+.Climb {
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.Moose {
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.Muss {
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
 
 #contact {
   background-image: linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.1)),
@@ -194,7 +379,6 @@ button:hover {
   background: #444;
 }
 
-/* Unique Gradient Backgrounds for Each Project */
 .memory-allocator {
   background-color: #222629;
 }
