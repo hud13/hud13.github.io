@@ -145,28 +145,39 @@ section,
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.image-row1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 .Gmacs{
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
+  width: 40vh;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 10%;
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
 }
 
 .Diagram{
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
+  width: 40vh;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 10%;
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
 }
 
 .Editor{
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
+  width: 40vh;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 10%;
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
@@ -188,37 +199,49 @@ section,
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.image-row2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* ⬅ spacing between images */
+  flex-wrap: wrap;
+}
+
 .Circuit{
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
+  width: 40vh;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 10%;
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
 }
 
 .Verilog{
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
+  width: 40vh;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 10%;
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
 }
 
 .Testbench{
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
+  width: 40vh;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 10%;
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
 }
 
-.Editor{
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
+.VEditor{
+  width: 40vh;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 10%;
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
@@ -437,28 +460,39 @@ section,
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.image-row3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* ⬅ spacing between images */
+  flex-wrap: wrap;
+}
+
 .Climb {
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
+   width: 40vh;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 10%;
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
 }
 
 .Moose {
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
+   width: 40vh;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 10%;
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
 }
 
 .Muss {
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
+   width: 40vh;
+  height: 40vh;
+  object-fit: contain;
+  border-radius: 10%;
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
