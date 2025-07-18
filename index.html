@@ -21,7 +21,7 @@
 </header>
 
 <section id="home">
-  <div class="headshot">
+  <div class="image0">
     <img src="images/Decent headshot.jpeg" class="round-image">
   </div>
 
@@ -49,6 +49,15 @@
     A heap consistency checker function is included used to ensure no storage corruption or errors occur. 
     The full implementation can be found <a href="https://github.com/hud13/projects" target="_blank">HERE</a></p>
     </div>
+    <div class="image1">
+      <img src="images/Gmacs Code Screenshot.png" class="Gmacs">
+    </div>
+    <div class="image2">
+      <img src="images/Memory Allocation Diagram.png" class="Diagram">
+    </div>
+    <div class="image3">
+      <img src="images/Editor Screenshot.png" class="Editor">
+    </div>
   </section>
 
   <section class="project four-bit-computer">
@@ -60,6 +69,18 @@
     The design was downloaded and verified on an FPGA board, correctly responding to the board's physical switches and internal clock. 
     Full control unit Verilog and testbench code can be found <a href="https://github.com/hud13/projects" target="_blank">HERE</a></p>
     </div>
+    <div class="image4">
+      <img src="images/Circuit Generation.png" class="Circuit">
+    </div>
+    <div class="image5">
+      <img src="images/Verilog Code Example.png" class="Verilog">
+    </div>
+    <div class="image6">
+      <img src="images/Testbench Waveform.png" class="Testbench">
+    </div>
+    <div class="image7">
+      <img src="images/FPGA Board Pinout.png" class="Editor">
+    </div>
   </section>
 
   <section class="project amplifier-design">
@@ -70,10 +91,30 @@
     PSPICE was used to construct a circuit schematic with appropriate component values for both BJT and MOSFET style amplifiers for a 15V power supply. 
     Circuit behavior was simulated to ensure correct response throughout an appropriate range of frequencies. 
     The circuit was then constructed and verified through a testing process involving oscilloscope measurements of expected frequency and current. 
-
-    (more details here button that shows more pictures of the process here)
-    (Separate bjt and mosfet amplifier designs are shown in a drop down style page)
     </p>
+    </div>
+
+    <div class="button-row">
+    <button class="dropdown-toggle" onclick="toggleDropdown('gallery1')">BJT Amplifier</button>
+    <button class="dropdown-toggle" onclick="toggleDropdown('gallery2')">MOSFET Amplifier</button>
+    </div>
+
+    <div class="dropdown-wrapper">
+    <div id="gallery1" class="dropdown-content">
+      <button class="close-button" onclick="closeDropdown('gallery1')">x</button>
+      <img src="images/BJT PSPICE.png" alt="image8">
+      <img src="images/Project Schematic.png" alt="image9">
+      <img src="images/Constructed BJT Amp.png" alt="image10">
+      <img src="images/BJT Testting Numbers.png" alt="image11">
+    </div>
+
+    <div id="gallery2" class="dropdown-content">
+      <button class="close-button" onclick="closeDropdown('gallery1')">x</button>
+      <img src="images/Full PSPICE.png" alt="image12">
+      <img src="images/MOSFET AMP.png" alt="image13">
+      <img src="images/Transient Analysis.png" alt="image14">
+      <img src="images/Transient Sweep.png" alt="image15">
+      </div>
     </div>
     </section>
 
@@ -88,7 +129,20 @@
 <section id="about">
   <div class="text-box">
   <h2>About Me</h2>
-  <p>Information about me self.</p>
+  <p>My name is Hudson Dalby, and I'm an aspiring engineer studying at the University of Utah. 
+    I am pursuing a bachelor's & master's degree in computer engineering with an emphasis on deep learning & AI. 
+    I love to keep a balanced lifestyle by being outdoors, on adventures, or in the gym outside of programming and studying. 
+  </p>
+  </div>
+
+  <div class="image16">
+    <img src="images/Climb.jpeg" class="Climb">
+  </div>
+  <div class="image17">
+    <img src="images/Moose.jpeg" class="Moose">
+  </div>
+  <div class="image18">
+    <img src="images/Muss.jpeg" class="Muss">
   </div>
 </section>
 
