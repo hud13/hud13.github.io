@@ -10,7 +10,7 @@ html, body {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   height: 100%;
-  overflow-x: hidden; /* Prevent right-side white strip */
+  overflow-x: hidden;
 }
 
 /* Scrollbar container */
@@ -25,12 +25,11 @@ body::-webkit-scrollbar-track {
 
 /* Scrollbar thumb (the draggable part) */
 body::-webkit-scrollbar-thumb {
-  background-color: #474B4F;    /* medium gray */
+  background-color: #474B4F;
   border-radius: 10px;
-  border: 3px solid #61892F; /* creates padding around the thumb */
+  border: 3px solid #61892F;
 }
 
-/* Optional hover effect */
 body::-webkit-scrollbar-thumb:hover {
   background-color: #6B6E70;
 }
@@ -95,7 +94,7 @@ section,
   color: white;
 }
 
-#home .round-image {
+#home .Headshot {
   width: 25vh;
   height: 25vh;
   object-fit: cover;
@@ -130,7 +129,21 @@ section,
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Memory Allocator Images */
+/* Memory Allocator Section */
+
+.memory-allocator {
+  background-color: #222629;
+}
+
+.memory-allocator .text-box {
+  background-color: #474B4F;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
 .Gmacs{
   width: 25vh;
@@ -159,7 +172,21 @@ section,
   filter: brightness(1.05) contrast(1.1);
 }
 
-/* Simple Computer Images */
+/* Simple Computer Section */
+
+.four-bit-computer {
+  background-color: #222629;
+}
+
+.four-bit-computer .text-box {
+  background-color: #474B4F;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
 .Circuit{
   width: 25vh;
@@ -197,215 +224,7 @@ section,
   filter: brightness(1.05) contrast(1.1);
 }
 
-/* Button styling */
-.button-row {
-  margin: 1rem 0;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-/* Dropdown buttons */
-.dropdown-toggle {
-  padding: 0.6rem 1.2rem;
-  background-color: #444;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-toggle:hover {
-  background-color: #666;
-}
-
-/* Dropdown wrapper allows side-by-side layout */
-.dropdown-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-/* Each dropdown panel */
-.dropdown-content {
-  display: none;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 10px;
-  padding: 1rem;
-  width: 90%;
-  max-width: 900px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  animation: dropdownFade 0.4s ease-out;
-  position: relative;
-}
-
-/* Animation effect */
-@keyframes dropdownFade {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Close button */
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: #333;
-  cursor: pointer;
-}
-
-/* Image styling */
-.dropdown-content img {
-  width: 100%;
-  max-width: 300px;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-  display: inline-block;
-}
-
-.dropdown-content img:hover {
-  transform: scale(1.05);
-}
-
-/* Optional: group images into rows */
-.dropdown-content {
-  text-align: center;
-}
-
-#about {
-  background-color: #222629;
-}
-
-#about .text-box {
-  background-color: #474B4F;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.Climb {
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-}
-
-.Moose {
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-}
-
-.Muss {
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-}
-
-
-#contact {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.1)),
-                    url('images/HexBackground.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
-  color: white;
-}
-
-#contact .text-box {
-  background-color: #474B4F;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Contact Form Styling */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 300px;
-  width: 100%;
-}
-
-input, textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-button {
-  padding: 10px;
-  background-color: #61892F;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #444;
-}
-
-.memory-allocator {
-  background-color: #222629;
-}
-
-.memory-allocator .text-box {
-  background-color: #474B4F;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.four-bit-computer {
-  background-color: #222629;
-}
-
-.four-bit-computer .text-box {
-  background-color: #474B4F;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
+/* Amplifier Design Section */
 
 .amplifier-design {
   background-color: #222629;
@@ -497,6 +316,97 @@ button:hover {
   transform: scale(1.05);
 }
 
+/* Button styling */
+.button-row {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Dropdown buttons */
+.dropdown-toggle {
+  padding: 0.6rem 1.2rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: #666;
+}
+
+/* Dropdown wrapper allows side-by-side layout */
+.dropdown-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Each dropdown panel */
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: dropdownFade 0.4s ease-out;
+  position: relative;
+}
+
+/* Animation effect */
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Image styling */
+.dropdown-content img {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.dropdown-content img:hover {
+  transform: scale(1.05);
+}
+
+.dropdown-content {
+  text-align: center;
+}
+
+/* More Projects Section */
+
 .more-projects {
  background-color: #222629;
 }
@@ -510,3 +420,99 @@ button:hover {
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* About Me Section */
+
+#about {
+  background-color: #222629;
+}
+
+#about .text-box {
+  background-color: #474B4F;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.Climb {
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.Moose {
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.Muss {
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+/* Contact Me Section */
+
+#contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.1)),
+                    url('images/HexBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  color: white;
+}
+
+#contact .text-box {
+  background-color: #474B4F;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  width: 100%;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px;
+  background-color: #61892F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
+}
+
