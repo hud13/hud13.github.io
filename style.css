@@ -161,6 +161,12 @@ section,
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.Gmacs:hover {
+  transform: scale(1.05);
 }
 
 .Diagram{
@@ -171,6 +177,12 @@ section,
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.Diagram:hover {
+  transform: scale(1.05);
 }
 
 .Editor{
@@ -181,6 +193,12 @@ section,
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.Editor:hover {
+  transform: scale(1.05);
 }
 
 /* Simple Computer Section */
@@ -203,7 +221,7 @@ section,
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* ⬅ spacing between images */
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -215,6 +233,12 @@ section,
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.Circuit:hover {
+  transform: scale(1.05);
 }
 
 .Verilog{
@@ -225,6 +249,12 @@ section,
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.Verilog:hover {
+  transform: scale(1.05);
 }
 
 .Testbench{
@@ -235,6 +265,12 @@ section,
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.Testbench:hover {
+  transform: scale(1.05);
 }
 
 .VEditor{
@@ -245,6 +281,12 @@ section,
   border: 2px solid #86C232;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
   filter: brightness(1.05) contrast(1.1);
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.VEditor:hover {
+  transform: scale(1.05);
 }
 
 /* Amplifier Design Section */
@@ -319,31 +361,20 @@ section,
   text-align: center;
 }
 
-/* Image styling inside each gallery */
 .dropdown-content img {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 40vh;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 10%;
+  border: 2px solid #86C232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  filter: brightness(1.05) contrast(1.1);
   transition: transform 0.3s ease;
-  display: block;
+  flex: 0 0 auto;
 }
 
 .dropdown-content img:hover {
   transform: scale(1.05);
-}
-
-/* Close button (if used) */
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: #333;
-  cursor: pointer;
 }
 
 /* Optional animation */
@@ -371,6 +402,27 @@ section,
   max-width: 600px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.github-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  border: 2px solid;
+  background-color: #61892F;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.github-button:hover {
+  background-color: #86C232;
+  transform: translateY(-2px);
 }
 
 /* About Me Section */
