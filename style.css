@@ -329,7 +329,7 @@ section,
 /* Dropdown buttons */
 .dropdown-toggle {
   padding: 0.6rem 1.2rem;
-  background-color: #444;
+  background-color: #61892F;
   color: white;
   border: none;
   border-radius: 6px;
@@ -339,7 +339,7 @@ section,
 
 .dropdown-toggle.active {
   background-color: #86C232;  /* Highlight color */
-  color: black;
+  color: white;
   border: 2px solid #fff;
   font-weight: bold;
 }
@@ -445,7 +445,7 @@ section,
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* ⬅ spacing between images */
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -502,32 +502,23 @@ section,
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Form Styling */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 300px;
-  width: 100%;
-}
-
-input, textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-button {
-  padding: 10px;
+.action-button {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  margin: 0.5rem;
   background-color: #61892F;
   color: white;
+  font-weight: bold;
+  text-decoration: none;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background: #444;
+.action-button:hover {
+  background-color: #86C232;
+  transform: translateY(-2px);
 }
 
