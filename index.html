@@ -75,40 +75,41 @@
     </div>
   </section>
 
-  <section class="project amplifier-design">
+<section class="project amplifier-design">
 
-    <div class="text-box">
+  <!-- Text description -->
+  <div class="text-box">
     <h2>Amplifier Design</h2>
-    <p>A collection of projects revolving around constructing amplifier circuits to be used in a microphone.
-    PSPICE was used to construct a circuit schematic with appropriate component values for both BJT and MOSFET style amplifiers for a 15V power supply. 
-    Circuit behavior was simulated to ensure correct response throughout an appropriate range of frequencies. 
-    The circuit was then constructed and verified through a testing process involving oscilloscope measurements of expected frequency and current. 
+    <p>
+      A collection of projects revolving around constructing amplifier circuits to be used in a microphone.
+      PSPICE was used to construct a circuit schematic with appropriate component values for both BJT and MOSFET style amplifiers for a 15V power supply.
+      Circuit behavior was simulated to ensure correct response throughout an appropriate range of frequencies.
+      The circuit was then constructed and verified through a testing process involving oscilloscope measurements of expected frequency and current.
     </p>
-    </div>
+  </div>
 
-    <div class="button-row">
-    <button class="dropdown-toggle" onclick="toggleDropdown('gallery1')">BJT Amplifier</button>
-    <button class="dropdown-toggle" onclick="toggleDropdown('gallery2')">MOSFET Amplifier</button>
-    </div>
+  <!-- Buttons under the text -->
+  <div class="button-row">
+    <button class="dropdown-toggle" onclick="toggleDropdown('gallery1', this)">BJT Amplifier</button>
+    <button class="dropdown-toggle" onclick="toggleDropdown('gallery2', this)">MOSFET Amplifier</button>
+  </div>
 
-    <div class="dropdown-wrapper">
-    <div id="gallery1" class="dropdown-content">
-      <button class="close-button" onclick="closeDropdown('gallery1')">x</button>
-      <img src="images/BJT PSPICE.png" class="BJT1">
-      <img src="images/Project Schematic.png" alt="BJT2">
-      <img src="images/Constructed BJT Amp.png" alt="BJT3">
-      <img src="images/BJT Testting Numbers.png" alt="BJT4">
-    </div>
+  <!-- Image gallery rows -->
+  <div id="gallery1" class="dropdown-content">
+    <img src="images/BJT PSPICE.png" alt="BJT1">
+    <img src="images/Project Schematic.png" alt="BJT2">
+    <img src="images/Constructed BJT Amp.png" alt="BJT3">
+    <img src="images/BJT Testing Numbers.png" alt="BJT4">
+  </div>
 
-    <div id="gallery2" class="dropdown-content">
-      <button class="close-button" onclick="closeDropdown('gallery2')">x</button>
-      <img src="images/Full PSPICE.png" alt="MOSFET1">
-      <img src="images/MOSFET AMP.png" alt="MOSFET2">
-      <img src="images/Transient Analysis.png" alt="MOSFET3">
-      <img src="images/Transient Sweep.png" alt="MOSFET4">
-      </div>
-    </div>
-    </section>
+  <div id="gallery2" class="dropdown-content">
+    <img src="images/Full PSPICE.png" alt="MOSFET1">
+    <img src="images/MOSFET AMP.png" alt="MOSFET2">
+    <img src="images/Transient Analysis.png" alt="MOSFET3">
+    <img src="images/Transient Sweep.png" alt="MOSFET4">
+  </div>
+
+</section>
 
   <section class="project more-projects">
     <div class="text-box">

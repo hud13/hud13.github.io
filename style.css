@@ -249,10 +249,12 @@ section,
 
 /* Amplifier Design Section */
 
+/* Amplifier section background */
 .amplifier-design {
   background-color: #222629;
 }
 
+/* Text box styling */
 .amplifier-design .text-box {
   background-color: #474B4F;
   color: white;
@@ -260,86 +262,21 @@ section,
   border-radius: 10px;
   max-width: 600px;
   text-align: center;
+  margin: 0 auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Layout for button row */
-.button-row {
-  margin: 1rem 0;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-/* Dropdown buttons */
-.dropdown-toggle {
-  padding: 0.6rem 1.2rem;
-  background-color: #444;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* Container for dropdowns side by side */
-.dropdown-wrapper {
+/* Row containing content (if needed) */
+.amplifier-row {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 2rem;
-  margin-top: 1rem;
   flex-wrap: wrap;
+  padding: 2rem;
 }
 
-/* Each dropdown panel */
-.dropdown-content {
-  display: none;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 10px;
-  padding: 1rem;
-  width: 300px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  animation: dropdownFade 0.4s ease-out;
-  position: relative;
-}
-
-/* Animation keyframes */
-@keyframes dropdownFade {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Close button */
-.close-btn {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #333;
-}
-
-/* Image style */
-.dropdown-content img {
-  width: 100%;
-  margin-top: 1rem;
-  border-radius: 6px;
-  transition: transform 0.3s;
-}
-
-.dropdown-content img:hover {
-  transform: scale(1.05);
-}
-
-/* Button styling */
+/* Buttons centered in a row */
 .button-row {
   margin: 1rem 0;
   display: flex;
@@ -358,46 +295,46 @@ section,
   transition: background-color 0.3s ease;
 }
 
+.dropdown-toggle.active {
+  background-color: #86C232;  /* Highlight color */
+  color: black;
+  border: 2px solid #fff;
+  font-weight: bold;
+}
+
 .dropdown-toggle:hover {
   background-color: #666;
 }
 
-/* Dropdown wrapper allows side-by-side layout */
-.dropdown-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-/* Each dropdown panel */
+/* Image gallery container (one per button) */
 .dropdown-content {
-  display: none;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 10px;
-  padding: 1rem;
-  width: 90%;
-  max-width: 900px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  animation: dropdownFade 0.4s ease-out;
-  position: relative;
+  display: none;                    /* hidden until toggled */
+  flex-direction: row;             /* horizontal layout */
+  flex-wrap: wrap;                 /* wrap on small screens */
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 1rem 0;
+  max-width: 100%;
+  text-align: center;
 }
 
-/* Animation effect */
-@keyframes dropdownFade {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Image styling inside each gallery */
+.dropdown-content img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  display: block;
 }
 
-/* Close button */
+.dropdown-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Close button (if used) */
 .close-button {
   position: absolute;
   top: 10px;
@@ -409,25 +346,17 @@ section,
   cursor: pointer;
 }
 
-/* Image styling */
-.dropdown-content img {
-  width: 100%;
-  max-width: 300px;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-  display: inline-block;
+/* Optional animation */
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-.dropdown-content img:hover {
-  transform: scale(1.05);
-}
-
-.dropdown-content {
-  text-align: center;
-}
-
 /* More Projects Section */
 
 .more-projects {
