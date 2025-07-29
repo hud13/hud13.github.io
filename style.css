@@ -633,6 +633,16 @@ section,
     padding: 0.75rem 1rem;
   }
 
+  #home,
+  #contact {
+    background-attachment: scroll;   /* Prevents flickering on iOS */
+    background-position: center;
+    background-size: cover;
+    min-height: auto;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
   .nav-toggle {
     display: block;
     margin-left: auto; /* push button to the right */
@@ -661,8 +671,8 @@ section,
   }
 
   nav ul li {
-    display: block;       /* override your desktop inline */
-    margin: 0;            /* override desktop margins */
+    display: block;       
+    margin: 0;            
   }
 
   nav ul li a {
@@ -678,19 +688,14 @@ section,
     outline: 2px solid #86C232;
     outline-offset: 2px;
   }
-}
 
-@media (max-width: 768px) {
   section,
   .project {
     min-height: unset;
     height: auto;
     padding: 1.5rem 1rem;
-    scroll-snap-align: none; /* Optional: remove snap on mobile */
+    scroll-snap-align: none; 
   }
-}
-
-@media (max-width: 768px) {
   .text-box {
     padding: 1rem;
     font-size: 0.95rem;
