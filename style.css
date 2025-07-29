@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
@@ -39,7 +40,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(71, 75, 79, 0); 
+  background-color: rgba(71, 75, 79, 0);
   backdrop-filter: blur(10px);
   color: white;
   display: flex;
@@ -50,7 +51,7 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.logo{
+.logo {
   font-size: 2rem;
   font-weight: bolder;
   margin-left: 1rem;
@@ -86,8 +87,8 @@ section,
 }
 
 #home {
-  background-image: linear-gradient( rgba(34, 38, 41, 1),rgba(0, 0, 0, 0.1)),
-                    url('images/HexBackground.jpg');
+  background-image: linear-gradient(rgba(34, 38, 41, 1), rgba(0, 0, 0, 0.1)),
+    url('images/HexBackground.jpg');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -101,9 +102,12 @@ section,
   height: 25vh;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #86C232; /* Slightly thicker border for emphasis */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow for pop */
-  filter: brightness(1.1) contrast(1.15) saturate(1.05); /* Vivid color boost */
+  border: 2px solid #86C232;
+  /* Slightly thicker border for emphasis */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  /* Deeper shadow for pop */
+  filter: brightness(1.1) contrast(1.15) saturate(1.05);
+  /* Vivid color boost */
   transition: transform 0.4s ease, filter 0.3s ease;
 }
 
@@ -159,7 +163,7 @@ section,
   flex-wrap: wrap;
 }
 
-.Gmacs{
+.Gmacs {
   width: 40vh;
   height: 40vh;
   object-fit: cover;
@@ -175,7 +179,7 @@ section,
   transform: scale(1.05);
 }
 
-.Diagram{
+.Diagram {
   width: 40vh;
   height: 40vh;
   object-fit: cover;
@@ -191,7 +195,7 @@ section,
   transform: scale(1.05);
 }
 
-.Editor{
+.Editor {
   width: 40vh;
   height: 40vh;
   object-fit: cover;
@@ -231,7 +235,7 @@ section,
   flex-wrap: wrap;
 }
 
-.Circuit{
+.Circuit {
   width: 40vh;
   height: 40vh;
   object-fit: cover;
@@ -247,7 +251,7 @@ section,
   transform: scale(1.05);
 }
 
-.Verilog{
+.Verilog {
   width: 40vh;
   height: 40vh;
   object-fit: cover;
@@ -263,7 +267,7 @@ section,
   transform: scale(1.05);
 }
 
-.Testbench{
+.Testbench {
   width: 40vh;
   height: 40vh;
   object-fit: cover;
@@ -279,7 +283,7 @@ section,
   transform: scale(1.05);
 }
 
-.VEditor{
+.VEditor {
   width: 40vh;
   height: 40vh;
   object-fit: cover;
@@ -334,7 +338,7 @@ section,
 
 /* Dropdown buttons */
 .dropdown-toggle {
- display: inline-block;
+  display: inline-block;
   margin-top: 1rem;
   padding: 0.6rem 1.4rem;
   border: 2px solid;
@@ -350,7 +354,7 @@ section,
 }
 
 .dropdown-toggle.active {
-  background-color: #86C232; 
+  background-color: #86C232;
   color: white;
   border: 2px solid #fff;
   font-weight: bold;
@@ -363,9 +367,9 @@ section,
 
 /* Image gallery container (one per button) */
 .dropdown-content {
-  display: none;             
-  flex-direction: row;           
-  flex-wrap: wrap;               
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   padding: 2rem 0;
@@ -394,6 +398,7 @@ section,
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -401,7 +406,7 @@ section,
 }
 
 .more-projects {
- background-color: #222629;
+  background-color: #222629;
 }
 
 .more-projects .text-box {
@@ -460,7 +465,7 @@ section,
 }
 
 .Climb {
-   width: 40vh;
+  width: 40vh;
   height: 40vh;
   object-fit: cover;
   border-radius: 10%;
@@ -476,7 +481,7 @@ section,
 }
 
 .Moose {
-   width: 40vh;
+  width: 40vh;
   height: 40vh;
   object-fit: cover;
   border-radius: 10%;
@@ -492,7 +497,7 @@ section,
 }
 
 .Muss {
-   width: 40vh;
+  width: 40vh;
   height: 40vh;
   object-fit: cover;
   border-radius: 10%;
@@ -510,8 +515,8 @@ section,
 /* Contact Me Section */
 
 #contact {
-background-image: linear-gradient( rgba(34, 38, 41, 1),rgba(0, 0, 0, 0.1)),
-                    url('images/HexBackground.jpg');
+  background-image: linear-gradient(rgba(34, 38, 41, 1), rgba(0, 0, 0, 0.1)),
+    url('images/HexBackground.jpg');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -563,7 +568,7 @@ background-image: linear-gradient( rgba(34, 38, 41, 1),rgba(0, 0, 0, 0.1)),
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Modal Image */
@@ -587,4 +592,3 @@ background-image: linear-gradient( rgba(34, 38, 41, 1),rgba(0, 0, 0, 0.1)),
   cursor: pointer;
   z-index: 10000;
 }
-

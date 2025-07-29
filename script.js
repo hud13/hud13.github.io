@@ -23,21 +23,21 @@ function toggleDropdown(id, btn) {
 }
 
 document.querySelectorAll('.expandable').forEach(img => {
-    img.addEventListener('click', () => {
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('expandedImg');
-      modal.style.display = "block";
-      modalImg.src = img.src;
-    });
+  img.addEventListener('click', () => {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('expandedImg');
+    modal.style.display = "block";
+    modalImg.src = img.src;
   });
+});
 
-  document.querySelector('.modal .close').addEventListener('click', () => {
-    document.getElementById('imageModal').style.display = "none";
-  });
+document.querySelector('.modal .close').addEventListener('click', () => {
+  document.getElementById('imageModal').style.display = "none";
+});
 
-  // Optional: click outside the image to close
-  document.getElementById('imageModal').addEventListener('click', e => {
-    if (e.target.classList.contains('modal')) {
-      e.target.style.display = "none";
-    }
-  });
+// Optional: click outside the image to close
+document.getElementById('imageModal').addEventListener('click', e => {
+  if (e.target.classList.contains('modal')) {
+    e.target.style.display = "none";
+  }
+});

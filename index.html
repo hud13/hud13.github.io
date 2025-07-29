@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>
-  <div class="logo">Hudson Dalby</div>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <div class="logo">Hudson Dalby</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section id="home">
-  <div class="image0">
-    <img src="images/Headshot.jpeg" class="Headshot">
-  </div>
+  <section id="home">
+    <div class="image0">
+      <img src="images/Headshot.jpeg" class="Headshot">
+    </div>
 
-  <br>
-  <div class="text-box">
-  <h1>Welcome to My Portfolio!</h1>
-</div>
-<br>
-  <div class="text-box">
-    <p>This portfolio highlights projects completed as part of my undergraduate studies in Computer Engineering at the University of Utah.</p>
-  <br>
-  <p>Browse the featured projects below to see examples of my technical work and engineering experience.</p>
-  </div>
+    <br>
+    <div class="text-box">
+      <h1>Welcome to My Portfolio!</h1>
+    </div>
+    <br>
+    <div class="text-box">
+      <p>This portfolio highlights projects completed as part of my undergraduate studies in Computer Engineering at the
+        University of Utah.</p>
+      <br>
+      <p>Browse the featured projects below to see examples of my technical work and engineering experience.</p>
+    </div>
 
-</section>
+  </section>
 
   <section id="projects" class="project memory-allocator">
     <div class="text-box">
-    <h2>Memory Allocator</h2>
-    <br>
-    <p>Developed a high-performance dynamic memory allocator in C, emphasizing space efficiency and throughput. 
-      Implemented 16-byte aligned block management, an explicit free list for fast allocation, 
-      and on-demand unmapping of unused pages. Ensured reliability with a custom heap consistency checker. 
-      Demonstrates low-level systems knowledge and optimization skills.
-    </p>
+      <h2>Memory Allocator</h2>
+      <br>
+      <p>Developed a high-performance dynamic memory allocator in C, emphasizing space efficiency and throughput.
+        Implemented 16-byte aligned block management, an explicit free list for fast allocation,
+        and on-demand unmapping of unused pages. Ensured reliability with a custom heap consistency checker.
+        Demonstrates low-level systems knowledge and optimization skills.
+      </p>
     </div>
     <a href="https://github.com/hud13/projects" target="_blank" class="github-button">
       Full Project
@@ -61,12 +64,14 @@
 
   <section class="project four-bit-computer">
     <div class="text-box">
-    <h2>4-Bit Computer</h2>
-    <br>
-    <p>Engineered a custom control unit and datapath on an FPGA using Verilog, based on the Von Neumann architecture.
-       Translated a finite state machine into functional hardware, verified through testbenches and waveform simulation.
-        Successfully deployed to FPGA hardware, interfacing with physical inputs and clock signals. Highlights digital design and hardware validation experience.
-    </p>
+      <h2>4-Bit Computer</h2>
+      <br>
+      <p>Engineered a custom control unit and datapath on an FPGA using Verilog, based on the Von Neumann architecture.
+        Translated a finite state machine into functional hardware, verified through testbenches and waveform
+        simulation.
+        Successfully deployed to FPGA hardware, interfacing with physical inputs and clock signals. Highlights digital
+        design and hardware validation experience.
+      </p>
     </div>
     <a href="https://github.com/hud13/projects" target="_blank" class="github-button">
       Full Project
@@ -80,77 +85,82 @@
     </div>
   </section>
 
-<section class="project amplifier-design">
+  <section class="project amplifier-design">
 
-  <!-- Text description -->
-  <div class="text-box">
-    <h2>Amplifier Design</h2>
-    <br>
-    <p>
-      Designed and tested BJT and MOSFET amplifier circuits for microphone applications using PSPICE and oscilloscope validation. 
-      Simulated behavior for signal fidelity across frequency ranges and implemented final circuits for a 15V power supply. 
-      Demonstrates analog circuit design, simulation, and hands-on testing skills relevant to embedded systems and hardware engineering.
-    </p>
-  </div>
+    <!-- Text description -->
+    <div class="text-box">
+      <h2>Amplifier Design</h2>
+      <br>
+      <p>
+        Designed and tested BJT and MOSFET amplifier circuits for microphone applications using PSPICE and oscilloscope
+        validation.
+        Simulated behavior for signal fidelity across frequency ranges and implemented final circuits for a 15V power
+        supply.
+        Demonstrates analog circuit design, simulation, and hands-on testing skills relevant to embedded systems and
+        hardware engineering.
+      </p>
+    </div>
 
-  <!-- Buttons under the text -->
-  <div class="button-row">
-    <button class="dropdown-toggle" onclick="toggleDropdown('gallery1', this)">BJT Amplifier</button>
-    <button class="dropdown-toggle" onclick="toggleDropdown('gallery2', this)">MOSFET Amplifier</button>
-  </div>
+    <!-- Buttons under the text -->
+    <div class="button-row">
+      <button class="dropdown-toggle" onclick="toggleDropdown('gallery1', this)">BJT Amplifier</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown('gallery2', this)">MOSFET Amplifier</button>
+    </div>
 
-  <!-- Image gallery rows -->
-  <div id="gallery1" class="dropdown-content">
-    <img src="images/BJT PSPICE.png" alt="BJT1" class="expandable">
-    <img src="images/Project Schematic.png" alt="BJT2" class="expandable">
-    <img src="images/Constructed BJT Amp.png" alt="BJT3" class="expandable">
-    <img src="images/BJT Testing Numbers.png" alt="BJT4" class="expandable">
-  </div>
+    <!-- Image gallery rows -->
+    <div id="gallery1" class="dropdown-content">
+      <img src="images/BJT PSPICE.png" alt="BJT1" class="expandable">
+      <img src="images/Project Schematic.png" alt="BJT2" class="expandable">
+      <img src="images/Constructed BJT Amp.png" alt="BJT3" class="expandable">
+      <img src="images/BJT Testing Numbers.png" alt="BJT4" class="expandable">
+    </div>
 
-  <div id="gallery2" class="dropdown-content">
-    <img src="images/Full PSPICE.png" alt="MOSFET1" class="expandable">
-    <img src="images/MOSFET AMP.png" alt="MOSFET2" class="expandable">
-    <img src="images/Transient Analysis.png" alt="MOSFET3" class="expandable">
-    <img src="images/Transient Sweep.png" alt="MOSFET4" class="expandable">
-  </div>
+    <div id="gallery2" class="dropdown-content">
+      <img src="images/Full PSPICE.png" alt="MOSFET1" class="expandable">
+      <img src="images/MOSFET AMP.png" alt="MOSFET2" class="expandable">
+      <img src="images/Transient Analysis.png" alt="MOSFET3" class="expandable">
+      <img src="images/Transient Sweep.png" alt="MOSFET4" class="expandable">
+    </div>
 
-</section>
+  </section>
 
-<section class="project more-projects">
-  <div class="text-box">
-    <h2>GitHub Portfolio</h2>
-    <br>
-    <p>View more of my projects in the extended portfolio.</p>
-  </div>
-   <a href="https://github.com/hud13/projects" target="_blank" class="github-button">
+  <section class="project more-projects">
+    <div class="text-box">
+      <h2>GitHub Portfolio</h2>
+      <br>
+      <p>View more of my projects in the extended portfolio.</p>
+    </div>
+    <a href="https://github.com/hud13/projects" target="_blank" class="github-button">
       View on GitHub
     </a>
-</section>
+  </section>
 
-<section id="about">
-  <div class="text-box">
-  <h2>About Me</h2>
-  <br>
-  <p>I'm Hudson Dalby, a computer engineering student at the University of Utah, pursuing a combined bachelor's and master's degree with a focus on deep learning and artificial intelligence.
-     I'm passionate about solving complex technical problems and building efficient, scalable systems.
-      Outside of engineering, I value balance and enjoy spending time outdoors, staying active, and exploring new adventures.
-  </p>
-  </div>
-  <br>
-  <div class="image-row3">
-    <img src="images/Climb.jpeg" class="Climb">
-    <img src="images/Moose.jpeg" class="Moose">
-    <img src="images/Muss.jpeg" class="Muss">
-  </div>
-</section>
-
-<section id="contact">
-  <div class="text-box">
-    <h2>Contact Me</h2>
+  <section id="about">
+    <div class="text-box">
+      <h2>About Me</h2>
+      <br>
+      <p>I'm Hudson Dalby, a computer engineering student at the University of Utah, pursuing a combined bachelor's and
+        master's degree with a focus on deep learning and artificial intelligence.
+        I'm passionate about solving complex technical problems and building efficient, scalable systems.
+        Outside of engineering, I value balance and enjoy spending time outdoors, staying active, and exploring new
+        places.
+      </p>
+    </div>
     <br>
-    <p>Let’s connect—feel free to download my résumé or reach out on LinkedIn.</p>
-  </div>
-  <div class="button-row">
+    <div class="image-row3">
+      <img src="images/Climb.jpeg" class="Climb">
+      <img src="images/Moose.jpeg" class="Moose">
+      <img src="images/Muss.jpeg" class="Muss">
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="text-box">
+      <h2>Contact Me</h2>
+      <br>
+      <p>Let’s connect—feel free to download my résumé or reach out on LinkedIn.</p>
+    </div>
+    <div class="button-row">
       <a href="Technical Resume - Hudson Dalby - PDF.pdf" download class="action-button">
         Download Résumé
       </a>
@@ -159,14 +169,15 @@
         View LinkedIn
       </a>
     </div>
-</section>
+  </section>
 
-<div id="imageModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="expandedImg">
-</div>
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="expandedImg">
+  </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
+
 </html>
