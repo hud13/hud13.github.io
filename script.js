@@ -41,3 +41,24 @@ document.getElementById('imageModal').addEventListener('click', e => {
     e.target.style.display = "none";
   }
 });
+
+ document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+      toggle.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
+    });
+
+    // Close menu after tapping a link (single-page sites)
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  });
