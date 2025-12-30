@@ -23,7 +23,7 @@
   <nav id="primary-nav">
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#project">Projects</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -53,10 +53,12 @@
     <div class="text-box">
       <h2>Memory Allocator</h2>
       <br>
-      <p>Developed a high-performance dynamic memory allocator in C, emphasizing space efficiency and throughput.
-        Implemented 16-byte aligned block management, an explicit free list for fast allocation,
-        and on-demand unmapping of unused pages. Ensured reliability with a custom heap consistency checker.
-        Demonstrates low-level systems knowledge and optimization skills.
+      <p>This project involved the design and implementation of a high-performance dynamic memory allocator in C, 
+         with an emphasis on space efficiency and allocation throughput.
+         The allocator employs 16-byte aligned block management, an explicit free-list structure for fast allocation and deallocation, 
+         and on-demand unmapping of unused memory pages to reduce fragmentation.
+          System reliability was reinforced through the development of a custom heap consistency checker, 
+          demonstrating strong proficiency in low-level systems programming, memory management, and performance-oriented software design.
       </p>
     </div>
     <a href="https://github.com/hud13/projects" target="_blank" class="github-button">
@@ -70,15 +72,15 @@
     </div>
   </section>
 
-  <section class="project four-bit-computer">
+  <section class="project fpga-computer">
     <div class="text-box">
       <h2>4-Bit Computer</h2>
       <br>
-      <p>Engineered a custom control unit and datapath on an FPGA using Verilog, based on the Von Neumann architecture.
-        Translated a finite state machine into functional hardware, verified through testbenches and waveform
-        simulation.
-        Successfully deployed to FPGA hardware, interfacing with physical inputs and clock signals. Highlights digital
-        design and hardware validation experience.
+      <p>This project involved working with a group to design and implement a simplified RISC-based CPU in Verilog,
+         deployed on an FPGA platform, along with custom game software executed on the processor.
+        The system integrates a DE1-SoC FPGA board with a Nintendo NES controller interfaced through GPIO and a VGA display for real-time graphics output.
+         A simplified Fruit Ninja–style game was developed to demonstrate the full hardware–software stack,
+        including custom instruction execution, peripheral control, real-time input handling, and graphical rendering on FPGA hardware.
       </p>
     </div>
     <a href="https://github.com/hud13/projects" target="_blank" class="github-button">
@@ -86,10 +88,10 @@
     </a>
     <br>
     <div class="image-row2">
-      <img src="images/Circuit Generation.png" class="Circuit expandable">
-      <img src="images/Verilog Code Example.png" class="Verilog expandable">
+      <img src="images/VGA.png" class="VGA expandable">
+      <img src="images/FPGA.jpg" class="FPGA expandable">
+      <img src="images/CPU.png" class="CPU expandable">
       <img src="images/Testbench Waveform.png" class="Testbench expandable">
-      <img src="images/FPGA Board Pinout.png" class="VEditor expandable">
     </div>
   </section>
 
@@ -100,12 +102,10 @@
       <h2>Amplifier Design</h2>
       <br>
       <p>
-        Designed and tested BJT and MOSFET amplifier circuits for microphone applications using PSPICE and oscilloscope
-        validation.
-        Simulated behavior for signal fidelity across frequency ranges and implemented final circuits for a 15V power
-        supply.
-        Demonstrates analog circuit design, simulation, and hands-on testing skills relevant to embedded systems and
-        hardware engineering.
+        This project involved the design, simulation, and experimental validation of BJT- and MOSFET-based amplifier circuits for microphone signal conditioning. 
+        Circuit behavior was analyzed using PSPICE to evaluate gain, bandwidth, and signal fidelity across relevant frequency ranges, 
+        followed by physical implementation and oscilloscope-based verification under a 15 V power supply. The work demonstrates practical analog circuit design skills, 
+        simulation-driven analysis, and hands-on hardware debugging relevant to embedded and mixed-signal systems.
       </p>
     </div>
 
@@ -148,7 +148,7 @@
       <h2>About Me</h2>
       <br>
       <p>I'm Hudson Dalby, a computer engineering student at the University of Utah, pursuing a combined bachelor's and
-        master's degree with a focus on deep learning and artificial intelligence.
+        master's degree with a focus on deep learning, embedded systems, and artificial intelligence.
         I'm passionate about solving complex technical problems and building efficient, scalable systems.
         Outside of engineering, I value balance and enjoy spending time outdoors, staying active, and exploring new
         places.

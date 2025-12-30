@@ -213,11 +213,11 @@ section,
 
 /* Simple Computer Section */
 
-.four-bit-computer {
+.fpga-computer {
   background-color: #222629;
 }
 
-.four-bit-computer .text-box {
+.fpga-computer .text-box {
   background-color: #474B4F;
   color: white;
   padding: 2rem;
@@ -235,7 +235,7 @@ section,
   flex-wrap: wrap;
 }
 
-.Circuit {
+.CPU {
   width: 40vh;
   height: 40vh;
   object-fit: cover;
@@ -247,11 +247,11 @@ section,
   flex: 0 0 auto;
 }
 
-.Circuit:hover {
+.CPU:hover {
   transform: scale(1.05);
 }
 
-.Verilog {
+.FPGA {
   width: 40vh;
   height: 40vh;
   object-fit: cover;
@@ -263,7 +263,7 @@ section,
   flex: 0 0 auto;
 }
 
-.Verilog:hover {
+.FPGA:hover {
   transform: scale(1.05);
 }
 
@@ -283,7 +283,7 @@ section,
   transform: scale(1.05);
 }
 
-.VEditor {
+.VGA {
   width: 40vh;
   height: 40vh;
   object-fit: cover;
@@ -295,7 +295,7 @@ section,
   flex: 0 0 auto;
 }
 
-.VEditor:hover {
+.VGA:hover {
   transform: scale(1.05);
 }
 
