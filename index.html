@@ -24,6 +24,7 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#active-projects">Active Projects</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -41,7 +42,7 @@
     </div>
     <br>
     <div class="text-box">
-      <p>This portfolio highlights projects completed as part of my undergraduate studies in Computer Engineering at the
+      <p>This page highlights my projects as a Computer Engineering student at the
         University of Utah.</p>
       <br>
       <p>Browse the featured projects below to see examples of my technical work and engineering experience.</p>
@@ -49,98 +50,127 @@
 
   </section>
 
-  <section id="projects" class="project memory-allocator">
-    <div class="text-box">
-      <h2>Memory Allocator</h2>
-      <br>
-      <p>This project involved the design and implementation of a high-performance dynamic memory allocator in C, 
-         with an emphasis on space efficiency and allocation throughput.
-         The allocator employs 16-byte aligned block management, an explicit free-list structure for fast allocation and deallocation, 
-         and on-demand unmapping of unused memory pages to reduce fragmentation.
-          System reliability was reinforced through the development of a custom heap consistency checker, 
-          demonstrating strong proficiency in low-level systems programming, memory management, and performance-oriented software design.
-      </p>
-    </div>
-    <a href="https://github.com/hud13/projects/blob/main/memory_allocator" target="_blank" class="github-button">
-      Full Project
-    </a>
-    <br>
-    <div class="image-row1">
-      <img src="images/Gmacs Code Screenshot.png" class="Gmacs expandable">
-      <img src="images/Memory Allocation Diagram.png" class="Diagram expandable">
-      <img src="images/Editor Screenshot.png" class="Editor expandable">
-    </div>
-  </section>
-
-  <section class="project fpga-computer">
-    <div class="text-box">
-      <h2>4-Bit Computer</h2>
-      <br>
-      <p>This project involved working with a group to design and implement a simplified RISC-based CPU in Verilog,
-         deployed on an FPGA platform, along with custom game software executed on the processor.
-        The system integrates a DE1-SoC FPGA board with a Nintendo NES controller interfaced through GPIO and a VGA display for real-time graphics output.
-         A simplified Fruit Ninja–style game was developed to demonstrate the full hardware–software stack,
-        including custom instruction execution, peripheral control, real-time input handling, and graphical rendering on FPGA hardware.
-      </p>
-    </div>
-    <a href="https://github.com/hud13/projects/tree/main/FPGA%20Computer%20Example%20Files" target="_blank" class="github-button">
-      Full Project
-    </a>
-    <br>
-    <div class="image-row2">
-      <img src="images/VGA.png" class="VGA expandable">
-      <img src="images/FPGA.jpg" class="FPGA expandable">
-      <img src="images/CPU.png" class="CPU expandable">
-      <img src="images/Testbench Waveform.png" class="Testbench expandable">
-    </div>
-  </section>
-
-  <section class="project amplifier-design">
+  <section id="projects" class="project motor-driver">
 
     <!-- Text description -->
     <div class="text-box">
-      <h2>Amplifier Design</h2>
+      <h2>Motor Driver</h2>
       <br>
       <p>
-        This project involved the design, simulation, and experimental validation of BJT- and MOSFET-based amplifier circuits for microphone signal conditioning. 
-        Circuit behavior was analyzed using PSPICE to evaluate gain, bandwidth, and signal fidelity across relevant frequency ranges, 
-        followed by physical implementation and oscilloscope-based verification under a 15 V power supply. The work demonstrates practical analog circuit design skills, 
-        simulation-driven analysis, and hands-on hardware debugging relevant to embedded and mixed-signal systems.
+        The Motor Driver PCB project involved the end-to-end design and implementation of a 6V DC motor control system,
+        combining hardware design, embedded programming, and control theory. A bidirectional H-bridge driver circuit was designed and implemented,
+        followed by the development of a custom PCB using KiCad with attention to signal integrity and layout quality.
+        On the firmware side, a closed-loop PID controller was implemented in C on an STM32 microcontroller, using encoder feedback to regulate motor speed.
+        The system was validated through oscilloscope measurements of switching signals and motor response, ensuring stable and reliable operation under varying conditions.
       </p>
     </div>
 
     <!-- Buttons under the text -->
     <div class="button-row">
-      <button class="dropdown-toggle" onclick="toggleDropdown('gallery1', this)">BJT Amplifier</button>
-      <button class="dropdown-toggle" onclick="toggleDropdown('gallery2', this)">MOSFET Amplifier</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown('gallery1', this)">KiCad Design</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown('gallery2', this)">Motor Control</button>
     </div>
 
     <!-- Image gallery rows -->
     <div id="gallery1" class="dropdown-content">
-      <img src="images/BJT PSPICE.png" alt="BJT1" class="expandable">
-      <img src="images/Project Schematic.png" alt="BJT2" class="expandable">
-      <img src="images/Constructed BJT Amp.png" alt="BJT3" class="expandable">
-      <img src="images/BJT Testing Numbers.png" alt="BJT4" class="expandable">
+      <img src="images/MotorSchematic.png" alt="schematic" class="expandable">
+      <img src="images/PCBRouting.png" alt="routing" class="expandable">
+      <img src="images/PCB.jpeg" alt="pcb" class="expandable">
     </div>
 
     <div id="gallery2" class="dropdown-content">
-      <img src="images/Full PSPICE.png" alt="MOSFET1" class="expandable">
-      <img src="images/MOSFET AMP.png" alt="MOSFET2" class="expandable">
-      <img src="images/Transient Analysis.png" alt="MOSFET3" class="expandable">
-      <img src="images/Transient Sweep.png" alt="MOSFET4" class="expandable">
+      <img src="images/Soldered.jpeg" alt="soldered" class="expandable">
+      <img src="images/MotorCode.png" alt="motor code" class="expandable">
+      <img src="images/MotorGraph.png" alt="motor graph" class="expandable">
     </div>
 
   </section>
+
+    <section class="project fpga-computer">
+    <div class="text-box">
+      <h2>FPGA Computer</h2>
+      <br>
+      <p>The FPGA Computer project involved co-designing a custom RISC-inspired processor on an Intel FPGA,
+         integrating both hardware and software components into a complete computing system. The CPU was implemented in Verilog,
+         including key architectural components such as the datapath, control unit, ALU, register file, and memory interfaces.
+         A custom instruction set architecture (ISA) and assembler were developed to support program execution,
+         enabling the creation of assembly-level applications. As a demonstration of system capability, a real-time game was implemented,
+         with VGA output for graphics and an external controller interfaced through memory-mapped I/O, showcasing full-stack hardware/software integration.
+      </p>
+    </div>
+    <br>
+    <div class="image-row2">
+      <img src="images/VGA.png" class="VGA expandable">
+      <img src="images/FPGA.jpg" class="FPGA expandable">
+      <img src="images/CPU.png" class="CPU expandable">
+    </div>
+  </section>
+
+
+  <section class="project xv6-extensions">
+    <div class="text-box">
+      <h2>xv6 OS Extensions</h2>
+      <br>
+      <p>This project focused on extending the xv6 kernel to deepen understanding of low-level operating system functionality.
+         Work spanned the full execution pipeline, including boot-time initialization, ELF-based program loading, and user-space execution.
+         A Unix-like shell with job control was implemented, supporting foreground and background processes along with signal handling for interactive control. 
+         Additionally, an ELF loader was developed to correctly map program segments into memory, apply relocations, 
+         and transfer execution to the program entry point. The project also involved analyzing and modifying virtual memory setup, 
+         including early page table initialization and address space construction.
+      </p>
+    </div>
+    <br>
+    <div class="source-button">
+      <a href="https://gitlab.com/xv6-64/xv6-64" target="_blank" class="action-button">
+        xv6-64 source code
+      </a>
+    </div>
+  </section>
+
+  <section id="active-projects" class="project ml-project">
+    <div class="text-box">
+      <h2>PCB Component Detection</h2>
+      <br>
+      <p>The PCB Component Detection project focuses on developing a computer vision system to automatically identify and classify electronic components from full printed circuit board images. 
+         Using PyTorch, a convolutional neural network–based object detection pipeline is being built to detect components such as resistors, capacitors,
+         and integrated circuits with bounding box predictions. The project includes constructing a labeled dataset from multiple PCB image sources, 
+         designing training and evaluation workflows, and analyzing model performance using standard detection metrics. 
+         Current work emphasizes improving detection accuracy while exploring efficient model architectures suitable for deployment under parameter and resource constraints.
+      </p>
+    </div>
+    <br>
+    <div class="image-row1">
+      <img src="images/TestPCB.png" class="expandable">
+    </div>
+  </section>
+
+  <section class="project heartbeat-sensor">
+    <div class="text-box">
+      <h2>Heartbeat Sensor & Visualizer</h2>
+      <br>
+      <p>The Heartbeat Sensor & Visualizer project involves the design of a complete embedded sensing system for real-time heart rate monitoring using photoplethysmography (PPG).
+         A custom analog front-end was developed using an LED and photodiode, incorporating filtering and amplification stages to extract a usable pulse signal. 
+         This signal is sampled using the ADC of an STM32 microcontroller, where embedded C code processes the data for heartbeat detection.
+         A custom PCB is being developed to integrate the sensing and signal conditioning circuitry, and current work focuses on refining signal processing algorithms 
+         and implementing real-time visualization and BPM estimation. The project combines analog design, embedded systems, and hardware/software integration into a cohesive sensing platform.
+      </p>
+    </div>
+    <br>
+    <div class="image-row2">
+      <img src="images/PPG.png" class="expandable">
+    </div>
+  </section>
+
 
   <section class="project more-projects">
     <div class="text-box">
       <h2>GitHub Portfolio</h2>
       <br>
-      <p>View more of my projects in the extended portfolio.</p>
+      <p>An Extended Github portfolio with more projects and details available upon request.
+         Feel free to reach out if you'd like to see more of my work or discuss any of the projects in detail!
+      </p>
+      <br>
     </div>
-    <a href="https://github.com/hud13/projects" target="_blank" class="github-button">
-      View on GitHub
-    </a>
   </section>
 
   <section id="about">
@@ -149,7 +179,8 @@
       <br>
       <p>I'm Hudson Dalby, a computer engineering student at the University of Utah, pursuing a combined bachelor's and
         master's degree with a focus on deep learning, embedded systems, and artificial intelligence.
-        I'm passionate about solving complex technical problems and building efficient, scalable systems.
+        I'm interested in the intersection of embedded systmes and machine learning, and am passionate about building
+        intelligent systems that can operate in real-world environments.
         Outside of engineering, I value balance and enjoy spending time outdoors, staying active, and exploring new
         places.
       </p>
@@ -166,11 +197,11 @@
     <div class="text-box">
       <h2>Contact Me</h2>
       <br>
-      <p>Let’s connect—feel free to download my résumé or reach out on LinkedIn.</p>
+      <p>Let’s connect—feel free to download my Resume or reach out on LinkedIn.</p>
     </div>
     <div class="button-row">
       <a href="Hudson Dalby - Technical Resume.pdf" download class="action-button">
-        Download Résumé
+        Download Resume
       </a>
 
       <a href="https://www.linkedin.com/in/hudson-dalby/" target="_blank" class="action-button">

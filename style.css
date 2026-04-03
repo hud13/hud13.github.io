@@ -12,19 +12,19 @@ body {
   scroll-snap-type: y mandatory;
   height: 100%;
   overflow-x: hidden;
+  background-color: #222629;
+  color: white;
 }
 
-/* Scrollbar container */
+/* Scrollbar */
 body::-webkit-scrollbar {
   width: 12px;
 }
 
-/* Scrollbar track (background) */
 body::-webkit-scrollbar-track {
   background: #222629;
 }
 
-/* Scrollbar thumb (the draggable part) */
 body::-webkit-scrollbar-thumb {
   background-color: #474B4F;
   border-radius: 10px;
@@ -40,7 +40,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(71, 75, 79, 0);
+  background-color: rgba(71, 75, 79, 0.08);
   backdrop-filter: blur(10px);
   color: white;
   display: flex;
@@ -59,7 +59,6 @@ header {
 
 nav ul {
   list-style: none;
-  padding: 0;
   text-align: center;
 }
 
@@ -71,8 +70,14 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
+nav ul li a:hover {
+  color: #86C232;
+}
+
+/* Shared section styles */
 section,
 .project {
   min-height: 100vh;
@@ -82,18 +87,19 @@ section,
   align-items: center;
   text-align: center;
   scroll-snap-align: start;
-  padding: 2rem;
+  padding: 7rem 2rem 3rem;
   box-sizing: border-box;
+  background-color: #222629;
 }
 
+/* Home */
 #home {
-  background-image: linear-gradient(rgba(34, 38, 41, 1), rgba(0, 0, 0, 0.1)),
-    url('images/HexBackground.jpg');
+  background-image: linear-gradient(rgba(34, 38, 41, 1), rgba(0, 0, 0, 0.15)),
+    url("images/HexBackground.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100vh;
   color: white;
 }
 
@@ -103,11 +109,8 @@ section,
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #86C232;
-  /* Slightly thicker border for emphasis */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  /* Deeper shadow for pop */
   filter: brightness(1.1) contrast(1.15) saturate(1.05);
-  /* Vivid color boost */
   transition: transform 0.4s ease, filter 0.3s ease;
 }
 
@@ -115,282 +118,139 @@ section,
   transform: scale(1.05);
 }
 
-#home .text-box {
-  background-color: #474B4F;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-#projects {
-  background-color: #222629;
-}
-
+/* Shared text boxes */
 .text-box {
   background-color: #474B4F;
   color: white;
   padding: 2rem;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 850px;
+  width: min(850px, 100%);
   text-align: center;
+  line-height: 1.65;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Memory Allocator Section */
+.text-box h1,
+.text-box h2 {
+  margin-bottom: 0.5rem;
+}
 
-.memory-allocator {
+.text-box p {
+  margin-bottom: 0.75rem;
+}
+
+.text-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Project section backgrounds */
+.motor-driver,
+.fpga-computer,
+.xv6-extensions,
+.ml-project,
+.more-projects,
+#about {
   background-color: #222629;
 }
 
-.memory-allocator .text-box {
-  background-color: #474B4F;
+#contact {
+  background-image: linear-gradient(rgba(34, 38, 41, 1), rgba(0, 0, 0, 0.15)),
+    url("images/HexBackground.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.image-row1 {
+/* Image rows */
+.image-row1,
+.image-row2,
+.image-row3,
+.dropdown-content {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  width: 100%;
+  margin-top: 1.5rem;
 }
 
-.Gmacs {
-  width: 40vh;
-  height: 40vh;
+/* Shared image styling */
+.expandable,
+.image-row1 img,
+.image-row2 img,
+.image-row3 img {
+  width: min(40vh, 320px);
+  height: min(40vh, 320px);
   object-fit: cover;
   border-radius: 10%;
   border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   filter: brightness(1.05) contrast(1.1);
   transition: transform 0.3s ease;
   flex: 0 0 auto;
 }
 
-.Gmacs:hover {
+.expandable:hover,
+.image-row1 img:hover,
+.image-row2 img:hover,
+.image-row3 img:hover {
   transform: scale(1.05);
 }
 
-.Diagram {
-  width: 40vh;
-  height: 40vh;
-  object-fit: cover;
-  border-radius: 10%;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
-}
-
-.Diagram:hover {
-  transform: scale(1.05);
-}
-
-.Editor {
-  width: 40vh;
-  height: 40vh;
-  object-fit: cover;
-  border-radius: 10%;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
-}
-
-.Editor:hover {
-  transform: scale(1.05);
-}
-
-/* Simple Computer Section */
-
-.fpga-computer {
-  background-color: #222629;
-}
-
-.fpga-computer .text-box {
-  background-color: #474B4F;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.image-row2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.CPU {
-  width: 40vh;
-  height: 40vh;
-  object-fit: cover;
-  border-radius: 10%;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
-}
-
-.CPU:hover {
-  transform: scale(1.05);
-}
-
-.FPGA {
-  width: 40vh;
-  height: 40vh;
-  object-fit: cover;
-  border-radius: 10%;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
-}
-
-.FPGA:hover {
-  transform: scale(1.05);
-}
-
-.Testbench {
-  width: 40vh;
-  height: 40vh;
-  object-fit: cover;
-  border-radius: 10%;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
-}
-
-.Testbench:hover {
-  transform: scale(1.05);
-}
-
-.VGA {
-  width: 40vh;
-  height: 40vh;
-  object-fit: cover;
-  border-radius: 10%;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
-}
-
-.VGA:hover {
-  transform: scale(1.05);
-}
-
-/* Amplifier Design Section */
-
-/* Amplifier section background */
-.amplifier-design {
-  background-color: #222629;
-}
-
-/* Text box styling */
-.amplifier-design .text-box {
-  background-color: #474B4F;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  margin: 0 auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Row containing content (if needed) */
-.amplifier-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 2rem;
-}
-
-/* Buttons centered in a row */
-.button-row {
-  margin: 1rem 0;
+/* Buttons */
+.button-row,
+.source-button {
+  margin: 1.25rem 0 0;
   display: flex;
   gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Dropdown buttons */
-.dropdown-toggle {
+.dropdown-toggle,
+.action-button {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.4rem;
-  border: 2px solid;
+  padding: 0.65rem 1.4rem;
+  margin: 0.5rem;
   background-color: #61892F;
   color: white;
+  font-weight: bold;
   text-decoration: none;
   border: none;
   border-radius: 6px;
-  font-weight: bold;
   font-size: 1rem;
+  cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-toggle:hover,
+.action-button:hover {
+  background-color: #86C232;
+  transform: translateY(-2px);
 }
 
 .dropdown-toggle.active {
   background-color: #86C232;
   color: white;
   border: 2px solid #fff;
-  font-weight: bold;
 }
 
-.dropdown-toggle:hover {
-  background-color: #61892F;
-  transform: translateY(-2px);
-}
-
-/* Image gallery container (one per button) */
+/* Dropdown galleries */
 .dropdown-content {
   display: none;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem 0;
+  padding: 1rem 0 0;
   max-width: 100%;
   text-align: center;
 }
 
 .dropdown-content img {
-  width: 40vh;
-  height: 40vh;
-  object-fit: cover;
-  border-radius: 10%;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
-}
-
-.dropdown-content img:hover {
-  transform: scale(1.05);
+  width: min(40vh, 320px);
+  height: min(40vh, 320px);
 }
 
 @keyframes dropdownFade {
@@ -405,159 +265,28 @@ section,
   }
 }
 
-.more-projects {
-  background-color: #222629;
-}
-
-.more-projects .text-box {
-  background-color: #474B4F;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.github-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.4rem;
-  border: 2px solid;
-  background-color: #61892F;
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.github-button:hover {
-  background-color: #86C232;
-  transform: translateY(-2px);
-}
-
-/* About Me Section */
-
-#about {
-  background-color: #222629;
-}
-
-#about .text-box {
-  background-color: #474B4F;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.image-row3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.Climb {
-  width: 40vh;
-  height: 40vh;
-  object-fit: cover;
-  border-radius: 10%;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
-}
-
-.Climb:hover {
-  transform: scale(1.05);
-}
-
-.Moose {
-  width: 40vh;
-  height: 40vh;
-  object-fit: cover;
-  border-radius: 10%;
-  border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
-  filter: brightness(1.05) contrast(1.1);
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
-}
-
-.Moose:hover {
-  transform: scale(1.05);
-}
-
+/* About images */
+.Climb,
+.Moose,
 .Muss {
-  width: 40vh;
-  height: 40vh;
+  width: min(40vh, 320px);
+  height: min(40vh, 320px);
   object-fit: cover;
   border-radius: 10%;
   border: 2px solid #86C232;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   filter: brightness(1.05) contrast(1.1);
   transition: transform 0.3s ease;
   flex: 0 0 auto;
 }
 
+.Climb:hover,
+.Moose:hover,
 .Muss:hover {
   transform: scale(1.05);
 }
 
-/* Contact Me Section */
-
-#contact {
-  background-image: linear-gradient(rgba(34, 38, 41, 1), rgba(0, 0, 0, 0.1)),
-    url('images/HexBackground.jpg');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
-  color: white;
-}
-
-#contact .text-box {
-  background-color: #474B4F;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.action-button {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  margin: 0.5rem;
-  background-color: #61892F;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.action-button:hover {
-  background-color: #86C232;
-  transform: translateY(-2px);
-}
-
-/* Expandable images styling */
-
-/* The Modal (background) */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -571,7 +300,6 @@ section,
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Modal Image */
 .modal-content {
   display: block;
   margin: auto;
@@ -581,7 +309,6 @@ section,
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-/* Close button */
 .close {
   position: absolute;
   top: 20px;
@@ -593,9 +320,7 @@ section,
   z-index: 10000;
 }
 
-/* Design for Mobile Devices*/
-
-/* Hamburger button (hidden on desktop) */
+/* Hamburger button */
 .nav-toggle {
   display: none;
   background: none;
@@ -605,7 +330,6 @@ section,
   border-radius: 6px;
 }
 
-/* 3 bars */
 .nav-toggle .bar {
   display: block;
   width: 26px;
@@ -615,18 +339,19 @@ section,
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Animate to X when open */
 .nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
+
 .nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
   opacity: 0;
 }
+
 .nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Mobile layout */
+/* Mobile */
 @media (max-width: 768px) {
   header {
     flex-wrap: wrap;
@@ -635,31 +360,31 @@ section,
 
   #home,
   #contact {
-    background-attachment: scroll;   /* Prevents flickering on iOS */
+    background-attachment: scroll;
     background-position: center;
     background-size: cover;
     min-height: auto;
     height: auto;
-    padding: 2rem 1rem;
+    padding: 6rem 1rem 2rem;
   }
 
   .nav-toggle {
     display: block;
-    margin-left: auto; /* push button to the right */
+    margin-left: auto;
   }
 
-  /* Make the nav take full width under the header row */
   #primary-nav {
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    background-color: rgba(34, 38, 41, 0.95); /* matches your theme */
+    background-color: rgba(34, 38, 41, 0.95);
     backdrop-filter: blur(10px);
     border-top: 1px solid #474B4F;
     transition: max-height 0.3s ease;
   }
+
   #primary-nav.open {
-    max-height: 300px; /* enough to show all links; adjust if needed */
+    max-height: 300px;
   }
 
   nav ul {
@@ -671,20 +396,19 @@ section,
   }
 
   nav ul li {
-    display: block;       
-    margin: 0;            
+    display: block;
+    margin: 0;
   }
 
   nav ul li a {
     display: block;
     padding: 0.75rem 0.25rem;
-    color: #fff;
-    text-decoration: none;
   }
 
-  /* Improve touch targets and focus */
   .nav-toggle:focus-visible,
-  nav ul li a:focus-visible {
+  nav ul li a:focus-visible,
+  .dropdown-toggle:focus-visible,
+  .action-button:focus-visible {
     outline: 2px solid #86C232;
     outline-offset: 2px;
   }
@@ -693,11 +417,39 @@ section,
   .project {
     min-height: unset;
     height: auto;
-    padding: 1.5rem 1rem;
-    scroll-snap-align: none; 
+    padding: 6rem 1rem 2rem;
+    scroll-snap-align: none;
   }
+
   .text-box {
-    padding: 1rem;
+    padding: 1.2rem;
     font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .image-row1,
+  .image-row2,
+  .image-row3,
+  .dropdown-content {
+    gap: 1rem;
+  }
+
+  .expandable,
+  .image-row1 img,
+  .image-row2 img,
+  .image-row3 img,
+  .dropdown-content img,
+  .Climb,
+  .Moose,
+  .Muss {
+    width: min(85vw, 320px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .button-row,
+  .source-button {
+    flex-direction: column;
+    align-items: center;
   }
 }
